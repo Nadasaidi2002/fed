@@ -1,0 +1,369 @@
+
+
+
+
+
+
+
+
+/*fonts*/
+@font-face {
+	font-family: 'Oceanwide';
+	src:url("../fonts/OceanwideSemibold.otf") format("opentype");	
+}
+
+/*Kleuren*/
+:root{
+--color-backgroundblack:rgb(0,0,0);
+--color-backgroundwhite:rgb(255, 255, 255);
+}
+
+/* ALGEMENE STYLING */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* https://css-tricks.com/inclusively-hidden/ */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+
+body {
+    margin: 0;
+    font-family: 'Oceanwide', 'sans-serif';
+}
+
+button{
+    font-family: inherit;
+    font-weight: lighter;
+}
+
+
+/* STYLING HEADER */
+header {
+    /* justify-content: end; */
+    display: flex;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
+    height: 7vh;
+}
+
+header.scrolled {
+    background-color: #fff; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+header > a:first-of-type{
+    color: white;
+}
+
+header > a:first-of-type.scrolled{
+    color: black;
+}
+
+
+header a:first-of-type {
+    margin-right: auto
+}
+
+header svg {
+    height: 2em;
+    width: 1.8em;
+    aspect-ratio: 1/1;
+}
+
+
+
+header > a:first-of-type svg{
+    width: 10em;
+}
+
+header > button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-left: .5em;
+}
+
+header > button.scrolled{
+    color: black;
+}
+
+
+
+
+
+/* NAVIGATIE STYLING (IN HAMBURGERMENU) */
+
+/* hij haalt hem uit de flow zodat die geen ruimte ineemt*/
+
+html.menuOpen {
+	overflow:hidden;
+}
+
+header nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* width: 80%; */
+    min-height: 100vh;
+    background-color: var(--color-backgroundwhite);
+    translate: 0% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* display: none; */
+
+	inset:0 0 0 15%;
+	transform:translateX(100%);
+	transition:.1s;
+}
+
+header nav.open{
+    transform:translateX(0%);
+	transition:.3s;
+}
+
+/* styling van het kruisje */
+header nav > button:first-of-type{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: transparent;
+    border: none;
+}
+
+header nav button img{
+    width: 2em;
+}
+
+/* lijst hoofdmenu men, woman, etc. */
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+}
+
+header nav ul:first-of-type{
+    margin-top: 2.2em;
+}
+
+header nav li{
+    list-style: none;
+    margin-top: 2em ;
+    /* background-color: lightgray; */
+    display: flex;
+    justify-content: end;
+    align-items: flex-end; 
+    
+}
+
+header nav li:last-of-type p {
+    color: red;
+}
+
+header nav li a svg{
+    width: .5em;
+    margin-right: 1em;
+}
+
+header nav ul p{
+    font-size: 1.5em;
+    /* padding-right: auto; */
+    margin-right: auto;
+}
+
+/* klein submenu met log in, faq, etc. */
+header nav ul:nth-of-type(2) {
+    justify-content: end;
+    align-items: flex-end;
+    margin-right: 1em;
+}
+
+header nav ul:nth-of-type(2) a{
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul a  {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end; 
+}
+
+
+/* styling van de 2 knoppen onderaan in de nav */
+header nav section{
+    display: flex;
+    place-content: center;
+    gap: .2em;
+    margin-bottom: 1em;
+}
+
+header nav section button{
+    background-color: transparent;
+    padding: .1em 2.2em;
+    font-family: inherit;
+    border: 1px black solid;
+    border-radius: 3em;
+    font-size: 1.3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    /* place-content: center; */
+}
+
+
+
+header nav section button img{
+    width: 1.2em;
+}
+
+
+
+svg {
+    width: 7px;
+    height: 12px;
+   
+
+}
+/* footer */
+footer{ 
+    background-color: black;
+    color: white;
+    padding: 2em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h2{
+    margin-bottom: 1em;
+}
+
+footer > p:first-of-type, footer > p:nth-of-type(2){
+    margin-bottom: 1.5em;
+}
+
+footer form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px grey solid;
+    padding-bottom: 2.5em;
+}
+
+footer input{
+    background-color: rgb(47, 47, 47);
+    color: white;
+    padding: 1em;
+    border-radius: 10em;
+    border: none;
+}
+
+footer input:nth-of-type(4){
+    width: 70vw;
+    margin: 1em 0;
+}
+
+
+footer label{
+    font-size: .9em;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer section {
+    margin: 2em 0;
+}
+
+footer nav:first-of-type{
+    margin: 2em 0;
+}
+
+footer nav:first-of-type ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer nav:first-of-type ul li{
+    list-style-type: none;
+}
+
+footer nav:first-of-type ul li a{
+    color: grey;
+}
+
+footer > button:first-of-type{
+    background-color: transparent;
+    padding: 2em 0em;
+    width: 14em;
+    margin: 3em 0;
+    font-family: inherit;
+    border: 1px white solid;
+    border-radius: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    display: flex;
+    place-content: center;
+}
+
+footer > button:first-of-type img{
+    width: 1.6em;
+}
+
+footer > p:nth-of-type(3), footer > p:nth-of-type(4){
+    font-size: .75em;
+    color: grey;
+    text-align: center;
+}
+
+footer nav:nth-of-type(2){
+    display: flex;
+    place-content: center;
+    margin: 2em 0;
+}
+
+footer nav:nth-of-type(2) ul{
+    display: flex;
+    gap: 1.5em;
+}
+
+footer nav:nth-of-type(2) ul li{
+    list-style-type: none;
+}
+
+footer nav:nth-of-type(2) ul li a svg{
+    width: 1.25em;
+    height: 1.25em;
+}
+
+footer > button:last-of-type{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+footer > button:last-of-type svg{
+    width: 1em;
+    height: 1em;
+}
+
