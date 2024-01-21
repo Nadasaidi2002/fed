@@ -2,13 +2,15 @@
 /*fonts*/
 @font-face {
 	font-family: 'Oceanwide';
-	src:url("../fonts/OceanwideSemibold.otf") format("opentype");	
+	src: url("../fonts/OceanwideSemibold.otf") format("opentype");	
 }
 
 /*Kleuren*/
 :root{
---color-backgroundblack:rgb(0,0,0);
---color-backgroundwhite:rgb(255, 255, 255);
+    --color-backgroundblack:rgb(0,0,0);
+    --color-backgroundwhite:rgb(255, 255, 255);
+
+
 }
 
 /* ALGEMENE STYLING */
@@ -156,7 +158,6 @@ header nav ul:first-of-type{
 header nav li{
     list-style: none;
     margin-top: 2em ;
-    /* background-color: lightgray; */
     display: flex;
     justify-content: end;
     align-items: flex-end; 
@@ -172,9 +173,13 @@ header nav li a svg{
     margin-right: 1em;
 }
 
+header nav li a svg:hover{
+    transform: scale(1.3);
+    transition: .5s;
+}
+
 header nav ul p{
     font-size: 1.5em;
-    /* padding-right: auto; */
     margin-right: auto;
 }
 
@@ -191,11 +196,21 @@ header nav ul:nth-of-type(2) a{
     text-decoration: none;
 }
 
-header nav ul a  {
+header nav ul:nth-of-type(2) a:hover{
+    text-decoration: underline;
+}
+
+header nav ul a {
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: flex-end; 
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover{
+    text-decoration: underline;
 }
 
 
@@ -220,6 +235,11 @@ header nav section button{
     /* place-content: center; */
 }
 
+header nav section button:hover{
+    background-color: black;
+    color: white;
+}
+
 
 
 header nav section button img{
@@ -239,12 +259,16 @@ svg {
 
 /* EERSTE SECTION */
 main > section:first-of-type{
-    background-image: url(../images/homepagefoto.png);
-    background-repeat: no-repeat;
-    background-position: center top;
     height: 85vh;
     position: relative;
     display: grid;
+    overflow: hidden;
+}
+
+main > section:first-of-type video{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 main > section:first-of-type h1{
@@ -276,6 +300,12 @@ main > section:first-of-type button {
     padding-right: 2em;
     margin-left: 1em;
     margin-right: 1em;
+}
+
+main > section:first-of-type button:hover{
+    color: white;
+    background-color: black;
+    transition: .5s;
 }
 
 main > section:first-of-type button:first-of-type{
@@ -495,7 +525,6 @@ main > section:nth-of-type(4) figure:hover img{
 
 main > section:nth-of-type(4) section{
     display: grid;
-    /* grid-template-columns: 1fr 0.5fr; */
     grid-template-rows: 1fr 1fr;
     margin-top: 1em;
     margin-left: 1em;
@@ -555,7 +584,6 @@ main > section:nth-of-type(5) figure:hover img{
 
 main > section:nth-of-type(5) section{
     display: grid;
-    /* grid-template-columns: 1fr 0.5fr; */
     grid-template-rows: 1fr 1fr;
     margin-top: 1em;
     margin-left: 1em;
@@ -633,7 +661,6 @@ main > section:nth-of-type(6) ul li:last-of-type{
 main > section:nth-of-type(6) ul img {
     width: 19em;
     height: 18em;
-    /* aspect-ratio: 9/11; */
 }
 
 main > section:nth-of-type(6) ul li a{
@@ -646,6 +673,24 @@ main > section:nth-of-type(6) ul li p{
     color: grey;
     margin: 1em 0;
 }
+
+
+
+main > section:nth-of-type(2) button, main > section:nth-of-type(3) button, main > section:nth-of-type(4) button, main > section:nth-of-type(5) button{
+    background-color: black;
+    border: none;
+    border-radius: 3em;
+    color: white;
+}
+
+main > section:nth-of-type(2) button:hover, main > section:nth-of-type(3) button:hover, main > section:nth-of-type(4) button:hover, main > section:nth-of-type(5) button:hover{
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 3em;
+    color: black;
+    transition: .5s;
+}
+
 
 
 
@@ -668,23 +713,6 @@ footer > p:first-of-type, footer > p:nth-of-type(2){
     margin-bottom: 1.5em;
 }
 
-/* footer form{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px grey solid;
-    padding-bottom: 2.5em;
-} */
-
-/* footer form fieldset{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-} */
-
-/* footer form fieldset{
-    border: none;
-} */
 
 footer form > section:first-of-type{
     display: flex;
@@ -716,12 +744,16 @@ footer input{
     padding: 1em;
     border-radius: 10em;
     border: none;
+    border: rgb(47, 47, 47) 1px solid;
 }
 
+footer form > section:nth-of-type(2) input:nth-of-type(1):hover{
+    border: white 1px solid;
+}
 
-footer input:nth-of-type(4){
-    width: 70vw;
-    margin: 1em 0;
+footer form > section:nth-of-type(2) input:nth-of-type(2):hover{
+    color: darkgrey;
+    background-color: white;
 }
 
 
@@ -730,14 +762,74 @@ footer label{
     cursor: pointer;
 }
 
+/* Code van Sanne's codepen (bron staat in de bronnenlijst) */
+summary {
+	list-style:none;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+summary::after {
+	content:"";
+	display:grid;
+	place-content:center;
+	width:.8em;
+	aspect-ratio:1;
+	
+	transition:.3s;
+	
+	border-radius:50%;
+	
+	background-image:
+		linear-gradient(#fff 0 0),
+		linear-gradient(#fff 0 0);
+	
+	background-size:
+		1.25em .15em,
+		.15em 1.25em;
+	background-repeat:
+		no-repeat;
+	background-position:
+		center;
+}
+
+details[open] summary::after {
+	rotate:45deg;
+}
+/*  */
+
+
 footer a{
     text-decoration: none;
     color: white;
 }
 
+footer > section:first-of-type a:hover{
+    text-decoration: underline;
+}
+
 footer > section {
     margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
+
+footer > section ul{
+    margin-bottom: 2.5em;
+}
+
+footer > section li{
+    list-style-type: none;
+    margin: .8em 0;
+}
+
+footer > section li a{
+    color: grey;
+}
+
+
 
 footer nav:first-of-type{
     margin: 2em 0;
@@ -757,6 +849,10 @@ footer nav:first-of-type ul li a{
     color: grey;
 }
 
+footer nav:first-of-type ul li a:hover{
+    text-decoration: underline;
+}
+
 footer > button:first-of-type{
     background-color: transparent; 
     padding: 2em 0em;
@@ -770,6 +866,11 @@ footer > button:first-of-type{
     align-items: center;
     display: flex;
     place-content: center;
+}
+
+footer > button:first-of-type:hover{
+    background-color: white;
+    transition: .5s;
 }
 
 footer > button:first-of-type img{
@@ -802,6 +903,11 @@ footer nav:nth-of-type(2) ul li a svg{
     height: 1.25em;
 }
 
+footer nav:nth-of-type(2) ul li a svg:hover{
+    transform: scale(1.4);
+    transition: .5s;
+}
+
 footer > button:last-of-type{
     background-color: transparent;
     color: white;
@@ -815,25 +921,52 @@ footer > button:last-of-type svg{
 
 
 
-
-
-/* .newsletter-form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column
+body > p{
+    background-color: black;
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 45%;
+    writing-mode: vertical-rl;
+    padding: 1em;
+    border-radius: .5em 0 0 .5em;
+    font-size: .75em;
 }
-  
-  label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+
+body > button{
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    background-color: gb(235, 235, 235);
+    padding: 1em;
+    border: none;
+
+    border-radius: 50%;
 }
-  
-  input[type="submit"] {
-    width: 20%;
-} */
+
+body > button:hover{
+    background-color: grey;
+}
+
+body > button svg{
+    width: 1.6em;
+    height: 1.6em;
+}
+
+body > a{
+    color: white;
+    text-transform: uppercase;
+	font-size: .7em;
+	font-weight: 500;
+	border: 1px black solid;
+	background-color: rgba(0, 0, 0, 0.39);
+	padding: .9em .5em;
+	border-radius: 200px;
+	position: fixed;
+	bottom: 6.5em;
+	right: 1.7em;
+}
+
 
 
 

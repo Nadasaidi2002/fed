@@ -46,3 +46,15 @@ function handleScroll() {
 
 // eventlistener
 window.addEventListener('scroll', handleScroll);
+
+
+// audio voor submit knop
+var submitKnop = document.querySelector('footer form > section:nth-of-type(2) input:nth-of-type(2)');
+var audio = document.querySelector('audio');
+
+function playaudio(){
+    audio.play();
+    console.log("jkdwk");
+}
+
+submitKnop.addEventListener('click', playaudio);
