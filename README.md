@@ -40,11 +40,12 @@ Surface plane
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Hompage Dailypaper  
-
+<img src="readme-plaatjes/screenshot-eerste-pagina.png" width="375px" alt="omschrijving van de pagina">
+ 
 
   #### Screenshot(s) van de tweede pagina (small screen):
  Product pagina 
-  <img src="readme-images/screenshot-eerste-pagina.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-plaatjes/tweedepagina.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -70,6 +71,8 @@ Tijdens het testen kwam ik erachter dat een aantal zaken niet goed werkten of on
 - De knoppen zijn onduidelijk en niet goed leesbaar.
 - Er is bijna geen feedback, en er is geen hover zichtbaar wanneer je eroverheen gaat.
 - Wanneer een hover wordt gebruikt, valt dit niet op en is het heel onduidelijk.
+- heeft geeen focus state
+
 
 #### Screenreader
 
@@ -95,13 +98,12 @@ Voorgestelde oplossingen zijn onder andere het toevoegen van een dark mode, het 
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+ <img src="readme-plaatjes/breekdownschets" width="375px" alt="breakdownschets">
+ 
+
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-plaatjes/menu-schets" width="375px" alt="breakdownschets">
 
 </details>
 
@@ -118,12 +120,22 @@ Voorgestelde oplossingen zijn onder andere het toevoegen van een dark mode, het 
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 
+  dit ging goed
+  - aanmaken van een list item voor het menu
+    <img src="readme-plaatjes/hamburger-menu" width="375px" alt="breakdownschets">
+
+
+Dit vond ik moeilijk
+- stylen van het hamburger menu
+  
+<img src="readme-plaatjes/versie-2-hamburgermenu" width="375px" alt="breakdownschets">
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   |nada saidi    
                 |
-  -  hoe maak ik een hamburger menu?
+  -  hoe maak style?
   - Is mijn site goed genoeg voor de opdracht
   - Mijn website veranderd steeds, moet ik me ook daar aan houden?
 
@@ -134,7 +146,7 @@ Voorgestelde oplossingen zijn onder andere het toevoegen van een dark mode, het 
   - Dooe middel van een ul / li en dan laten animeren in Jv ( dit komt nog aanbod in de volgede lessen)
   - Het is een goede site maar ik moet wel 2 pagina's uitwerken.
   - Dat is geen probleem ik mag de eerste versie gebruiken.
-  - ...
+  
 
 </details>
 
@@ -225,10 +237,10 @@ De website presteert beter dan eerst maar is nog steeds ruimte voor verbetering 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  -  de Knoppen hoeven niet kleiner
+  -  fonts gelukt door hun van docent
+  -  mag in een section
+  - foote Scroll bar moet blijven
 
 </details>
 
@@ -242,21 +254,23 @@ De website presteert beter dan eerst maar is nog steeds ruimte voor verbetering 
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+<img src="readme-plaatjes/eindpaginascreenshot.png" width="375px" alt="breakdownschets">
+
+<img src="readme-plaatjes/eindpagina2.png" width="375px" alt="breakdownschets">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+Ik heb geleerd hoe ik een carrosal kan toevoegen en stylen, het is gelukt om een video erin te zetten .
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+<img src="readme-plaatjes/Carrosel" width="375px" alt="breakdownschets">
+
+<img src="readme-plaatjes/video.png" width="375px" alt="breakdownschets">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+ Er waren 2 soorten fonts de dikke versie en wat dunnere versie, die dunne versie kon ik nergens vinden en moest je er voor betalen dus maar 1 deel van het vond kon ik krijgen en toepassen. Ik vond het een enorme uitdaging dit vak maar na bloed zweet en tranen (letterlijk) ben ik enorm trots op de uitkomst!
 
-  <img 
-
-  <img src="./
+<img src="readme-plaatjes/thinnerfont" width="375px" alt="breakdownschets">
 
 
 
@@ -271,8 +285,19 @@ De website presteert beter dan eerst maar is nog steeds ruimte voor verbetering 
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
-
+ <!-- 
+    Bronnne:
+    1. https://developer.mozilla.org/en-US/
+    2. https://codepen.io/nadasaidi2002/pen/WNPRQYX?editors=1100 (hamburgermenu)
+    3. https://codepen.io/Nadasaidi2002/pen/gOEwLJv (carrousels)
+    4. Martin (docent)
+    5. Studentenassistente 
+    6. Chat GPT ( Hoe zorg ik ervoor dat iets klibaar is op html css?)  
+       6.1 hoe voeg ik een class toe
+       6.2 hoe stijl ik een carrosel
+       6.3 hoe zorg ik ervoor dat een plaatje achter de tekst komt
+    7. CMD-genoten
+    8. https://www.youtube.com/watch?v=RIDA6elhmBU&ab_channel=KevinPowell 
+    9. https://www.youtube.com/watch?v=nANWDdsCG5U&ab_channel=SoundEffectsandGreenScreen
+ -->
 </details>
